@@ -68,4 +68,4 @@ Use the cleaned dataset to build an interactive dashboard in Power BI / Tableau.
 **Gautam Kurpatwar**
 Data Analyst Intern, SWYNEX Technologies
 GitHub: [github.com/GK3210](https://github.com/GK3210)
-LinkedIn: [add your profile link]
+LinkedIn: (https://www.linkedin.com/in/gautam-kurpatwar-98268138a/)
