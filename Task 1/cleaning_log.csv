@@ -1,0 +1,11 @@
+step,issue,action,records_affected
+1,Exact duplicate rows (all 23 columns identical),"Removed, first occurrence kept",48
+2,Same video_id + trending_date with different counters (snapshot duplicates),"Removed, row with highest views kept",2
+3,publish_time / trending_date stored as text; ints & flags with wide dtypes,"Converted to datetime (UTC), date, compact int and boolean types",2
+4,Repeated / leading / trailing spaces inside titles,Collapsed to single spaces; title_length & title_caps_ratio recalculated,588
+5,Same channel written with different capitalisation (e.g. 'marshmello' / 'Marshmello'),Standardised to the most frequent spelling,31
+6,ratings_disabled = True but likes/dislikes/ratios filled with fake 0 / 1.0,Set to missing (NaN) so averages are not distorted,169
+7,comments_disabled = True but comment_count filled with 0,Set to missing (NaN),632
+8,like_dislike_ratio = 1.0 although likes + dislikes = 0 (undefined ratio),Set to missing (NaN),1
+9,Videos that trended > 365 days after upload (old videos revived),Kept; flagged in new column days_to_trend_outlier,237
+10,video_id shared by different channels / upload times (ID collision),Kept; flagged in new column video_id_conflict,97
