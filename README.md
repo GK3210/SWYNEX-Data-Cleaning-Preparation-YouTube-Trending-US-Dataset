@@ -124,8 +124,7 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 
 ### 1. View counts are highly right-skewed
 
-![Distribution of views and category-level view ranges](assets/figures/01_views_distribution.png)
-
+![Distribution of views and category-level view ranges]
 - The mean views per video-day (**about 2.36 million**) is much higher than the median (**about 681 thousand**), showing that a relatively small number of very high-view records pull the mean upward.
 - The chart flags approximately **11%** of records above the IQR-based upper outlier threshold.
 - Category distributions also show a wide range of typical performance and extreme observations.
