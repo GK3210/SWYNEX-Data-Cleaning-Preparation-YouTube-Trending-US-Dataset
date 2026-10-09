@@ -124,7 +124,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 
 ### 1. View counts are highly right-skewed
 
-![Distribution of views and category-level view ranges]
 - The mean views per video-day (**about 2.36 million**) is much higher than the median (**about 681 thousand**), showing that a relatively small number of very high-view records pull the mean upward.
 - The chart flags approximately **11%** of records above the IQR-based upper outlier threshold.
 - Category distributions also show a wide range of typical performance and extreme observations.
@@ -132,8 +131,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 **Analyst takeaway:** Use medians and percentiles alongside averages when comparing video performance. A few viral videos can distort the mean.
 
 ### 2. Category volume and category reach are different
-
-![Video-day volume compared with median views by category](assets/figures/02_category_volume_vs_views.png)
 
 - **Entertainment** has the largest number of video-day records in this sample, followed by **Music** and **Howto & Style**.
 - **Gaming**, **Music**, and **Film & Animation** have the highest median views per video-day in the displayed comparison.
@@ -143,8 +140,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 
 ### 3. Engagement and time on the trending list vary by category
 
-![Category like ratios and average trending-list duration](assets/figures/03_category_engagement_and_lifespan.png)
-
 - **Howto & Style** has the highest median like ratio in the chart, with **Music** and **Comedy** also relatively high.
 - **News & Politics** and **Sports** show lower median like ratios in this sample.
 - The **Shows** category has the longest average stay in the displayed chart, but the sample is very small, so that result should be treated cautiously.
@@ -152,8 +147,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 **Analyst takeaway:** Views alone do not describe engagement. Compare interaction rates and time on the list, while checking sample sizes and disabled ratings/comments.
 
 ### 4. Weekday afternoons are a high-volume publishing window
-
-![Trending video-days by publishing weekday and hour](assets/figures/04_publish_time_heatmap.png)
 
 - Many trending-list observations are associated with videos published during weekday afternoon hours in **UTC**.
 - The figure reports that **32.7%** of trending rows were published between **14:00 and 17:00 UTC**.
@@ -163,8 +156,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 
 ### 5. Weekend records are fewer, but median views are higher
 
-![Trending-list volume and median views by publishing weekday](assets/figures/05_weekday_volume_vs_views.png)
-
 - Saturday and Sunday account for fewer video-day observations than weekdays in this dataset.
 - The displayed median views are higher for weekend-published videos overall, with Sunday highest in the chart.
 - This is an observational comparison and may reflect differences in content, audience, or other factors.
@@ -172,8 +163,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 **Analyst takeaway:** Consider weekday and weekend performance separately, and compare similar categories or channels before recommending a publishing schedule.
 
 ### 6. The monthly pattern changes noticeably around March 2018
-
-![Monthly changes in views, time to trend, and new entries](assets/figures/06_monthly_trend_shift.png)
 
 - Median views per video-day rise sharply from March 2018 onward in the displayed series.
 - Median time from upload to trending also increases during the same period.
@@ -184,8 +173,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 
 ### 7. Engagement metrics are strongly related to one another
 
-![Spearman rank correlation between numerical variables](assets/figures/07_correlation_heatmap.png)
-
 - Views have strong positive rank correlations with likes (**0.87**), dislikes (**0.86**), and comments (**0.83**) in the chart.
 - Likes and comments are also strongly correlated (**0.89**).
 - Tag count (**0.08**) and title length (**−0.07**) have near-zero rank correlations with views in this analysis.
@@ -195,8 +182,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 
 ### 8. Title length and tag count show limited relationships with views
 
-![Title length and tag count comparisons](assets/figures/08_title_and_tag_effects.png)
-
 - Shorter titles have a higher median like ratio in the displayed grouping.
 - Videos with **21–30 tags** have the highest median views among the tag-count groups shown, but the overall rank correlation between tag count and views is very small.
 - These group comparisons do not show that changing title length or adding tags will directly improve performance.
@@ -205,16 +190,12 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 
 ### 9. A small group of channels appears repeatedly
 
-![Top channels by days on the trending list](assets/figures/09_top_channels.png)
-
 - ESPN, *The Tonight Show Starring Jimmy Fallon*, Netflix, TheEllenShow, and Vox appear among the channels with the most video-days on the trending list.
 - The top ten channels account for only a small share of all records, and the list is spread across many channels.
 
 **Analyst takeaway:** Recurring presence can reflect an established audience, frequent publishing, or multiple videos trending over time. It should not be interpreted as a direct measure of subscriber count or channel quality.
 
 ### 10. Anomalies deserve investigation rather than automatic deletion
-
-![Upload-to-trending delays, controversial videos, and disabled comments](assets/figures/10_anomalies.png)
 
 - A small number of observations have very long delays between upload and trending; the chart marks a 365-day reference line.
 - Some high-view videos have more dislikes than likes, which may indicate controversial or strongly negative audience reactions.
@@ -223,8 +204,6 @@ The exact cleaning decisions should be documented alongside the relevant noteboo
 **Analyst takeaway:** Flag unusual records for review. Some are genuine edge cases—such as older videos that resurface—and should not be removed just because they are statistically extreme.
 
 ### 11. Videos that stay trending often gain more views over time
-
-![Growth multiple for videos with five or more trending days](assets/figures/11_views_growth_during_trending.png)
 
 - For videos with five or more trending days, the displayed median ratio of views on the last trending day to views on the first trending day is approximately **2.0×**.
 - The analysis includes **3,981 videos** that remained on the list for at least five days.
